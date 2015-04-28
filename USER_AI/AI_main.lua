@@ -2776,7 +2776,7 @@ function	OnIDLEWALK_ST ()
 	local x,y=GetV(V_POSITION,MyID)
 	local ox,oy=GetV(V_POSITION,GetV(V_OWNER,MyID))
 	local motion=GetV(V_MOTION,MyID)
-	if (GetDistanceAPR(MyID,MyDestX,MyDestY)>=1) or IdleWalkTries > 6 or GetDistanceAPR(GetV(V_OWNER,MyID),MyDestX,MyDestY) > GetMoveBounds() then 
+	if (GetDistanceAPR(MyID,MyDestX,MyDestY)<=1) then --we're there.
 		if OldHomunType==AMISTR and UseCastleRoute==1 and (UseIdleWalk==5 or UseIdleWalk==6) and RelativeRoute==0 and GetDistanceP(x,y,ox,oy) > 2 then
 			if GetTick() > AutoSkillTimeout then
 				DoSkill(HAMI_CASTLE,5,MyID)
@@ -2788,6 +2788,7 @@ function	OnIDLEWALK_ST ()
 		elseif UseCastleRoute==1 and OldHomunType==AMISTR and RelativeRoute==0 then
 			TraceAI("We're set to use castling route, but can't, UseIdleWalk="..UseIdleWalk.." distance: "..GetDistanceP(x,y,ox,oy))
 		end
+	elseif (GetDistanceAPR(MyID,MyDestX,MyDestY)>=1) or IdleWalkTries > 6 or GetDistanceAPR(GetV(V_OWNER,MyID),MyDestX,MyDestY) > GetMoveBounds() then 
 		MyDestX,MyDestY=GetIdleWalkDest(MyID)
 		if MyDestX==ox and MyDestY==oy then
 			MyDestX,MyDestY=Closest(MyID,MyDestX,MyDestY,1,1)
