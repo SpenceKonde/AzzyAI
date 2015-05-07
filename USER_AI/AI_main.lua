@@ -74,7 +74,7 @@ function doInit(myid)
 		end
 		UseSeraParalyze=0
 	end
-	if GetV(V_SKILLATTACKRANGE,myid,MH_POISON_MIST) < 2) then 
+	if GetV(V_SKILLATTACKRANGE,myid,MH_POISON_MIST) < 2 then 
 		if UseSeraPoisonMist and GetV(V_HOMUNTYPE,myid)==SERA then
 			logstring=logstring.."UseSeraPoisonMist disabled - you don't have the skill!"
 		end
@@ -2657,7 +2657,7 @@ function OnPROVOKE_ST()
 		TraceAI("PROVOKE_ST -> IDLE_ST Couldn't get into range to provoke/AoE owner")
 		if (MyPMode==12) then
 			DefensiveOwnerTimeout=GetTick()+20000
-		else if (MyPMode==7) then
+		elseif (MyPMode==7) then
 			ProvokeOwnerTimeout=GetTick()+10000
 		end
 		if MyPState~=PROVOKE_ST then
@@ -2788,7 +2788,8 @@ function	OnIDLEWALK_ST ()
 		elseif UseCastleRoute==1 and OldHomunType==AMISTR and RelativeRoute==0 then
 			TraceAI("We're set to use castling route, but can't, UseIdleWalk="..UseIdleWalk.." distance: "..GetDistanceP(x,y,ox,oy))
 		end
-	elseif (GetDistanceAPR(MyID,MyDestX,MyDestY)>=1) or IdleWalkTries > 6 or GetDistanceAPR(GetV(V_OWNER,MyID),MyDestX,MyDestY) > GetMoveBounds() then 
+		MyDestX,MyDestY=GetIdleWalkDest(MyID)
+	elseif (GetDistanceAPR(MyID,MyDestX,MyDestY)>=1) and (IdleWalkTries > 6 or GetDistanceAPR(GetV(V_OWNER,MyID),MyDestX,MyDestY) > GetMoveBounds()) then 
 		MyDestX,MyDestY=GetIdleWalkDest(MyID)
 		if MyDestX==ox and MyDestY==oy then
 			MyDestX,MyDestY=Closest(MyID,MyDestX,MyDestY,1,1)
@@ -2899,8 +2900,8 @@ function GetIdleWalkDest(MyID)
 				if distance < dist then
 					dist=distance
 					step=k
+					TraceAI("Route Analysis: "..posx..","..posy.." route step: "..k.." "..v[1]..","..v[2].." distance "..distance.." current step "..step.."/"..dist)
 				end
-				TraceAI("Route Analysis: "..posx..","..posy.." route step: "..k.." "..v[1]..","..v[2].." distance "..distance.." current step "..step.."/"..dist)
 			end
 		end
 		-- now we're at position 'step'	
@@ -3118,10 +3119,11 @@ function FailSkillUse(mode)
 		logappend("AAI_SKILLFAIL","Skill cast appears to have failed: Mode "..mode.." fail count "..SkillFailCount[mode].." will try again")
 		SkillFailCount[mode]=SkillFailCount[mode]+1
 	else
-		if mode
+		if (mode~=nil and mode ~=0) then
 		TraceAI("Skill cast appears to have failed, but we're past the retry limit, so screw it: Mode "..mode.." fail count "..SkillFailCount[mode])
 		logappend("AAI_SKILLFAIL","Skill cast appears to have failed, but we're past the retry limit, so screw it: Mode "..mode.." fail count "..SkillFailCount[mode])
 		SkillFailCount[mode]=0
+	end
 	end
 	AutoSkillTimeout = 1
 	AutoSkillCastTimeout = 1

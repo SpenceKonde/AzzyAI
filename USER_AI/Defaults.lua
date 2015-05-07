@@ -175,6 +175,7 @@ TankMonsterLimit	= 4
 AttackTimeLimit		= 0
 AggressiveRelogTracking = 0
 AggressiveRelogPath = "./AI/USER_AI/"
+ConfigPath = "./AI/USER_AI/"
 AttackLastFullSP = 0
 
 
