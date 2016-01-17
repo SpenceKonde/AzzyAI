@@ -2896,7 +2896,7 @@ function GetIdleWalkDest(MyID)
 				dist=0
 				TraceAI("Route Analysis: on route cell "..posx..","..posy.." route step: "..k.." "..v[1]..","..v[2].." current step "..step.."/"..dist)
 			else 
-				local distance=math.sqrt((v[1]-posx)^2+(v[2]-posy))
+				local distance=math.sqrt((v[1]-posx)^2+(v[2]-posy)^2)
 				if distance < dist then
 					dist=distance
 					step=k
