@@ -1,7 +1,8 @@
 # AzzyAI
 
 This is the source code repository for AzzyAI. 
-For more information, see the official website: http://drazzy.com/ro/ai
+
+I no longer play RO, and do not have time to take it up or maintain this AI except on a paid basis ($50/hr - that's what I get for other paid projects). I would like to find someone else to take up further development and maintenance of this AI - please contact me if you are interested - I can provide a bit of orientation for someone taking this on. 
 
 === Organization ===
 
