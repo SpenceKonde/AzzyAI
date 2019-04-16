@@ -1,0 +1,77 @@
+X:\AI Stuff\AzzyAIConfig\bin\Debug\Documentation.txt
+X:\AI Stuff\AzzyAIConfig\bin\Debug\Defaults.lua
+X:\AI Stuff\AzzyAIConfig\bin\Debug\H_Config.lua
+X:\AI Stuff\AzzyAIConfig\bin\Debug\H_Extra.lua
+X:\AI Stuff\AzzyAIConfig\bin\Debug\H_Tactics.lua
+X:\AI Stuff\AzzyAIConfig\bin\Debug\M_Config.lua
+X:\AI Stuff\AzzyAIConfig\bin\Debug\M_Extra.lua
+X:\AI Stuff\AzzyAIConfig\bin\Debug\M_Tactics.lua
+X:\AI Stuff\AzzyAIConfig\bin\Debug\PVP_Tact.lua
+X:\AI Stuff\AzzyAIConfig\bin\Debug\AzzyAIConfig.exe
+X:\AI Stuff\AzzyAIConfig\bin\Debug\AzzyAIConfig.pdb
+X:\AI Stuff\AzzyAIConfig\obj\x86\Debug\ResolveAssemblyReference.cache
+X:\AI Stuff\AzzyAIConfig\obj\x86\Debug\AzzyAIConfig.AzzyAIAboutBox.resources
+X:\AI Stuff\AzzyAIConfig\obj\x86\Debug\AzzyAIConfig.ExtraControl.resources
+X:\AI Stuff\AzzyAIConfig\obj\x86\Debug\AzzyAIConfig.PvpTactControl.resources
+X:\AI Stuff\AzzyAIConfig\obj\x86\Debug\AzzyAIConfig.MerTactControl.resources
+X:\AI Stuff\AzzyAIConfig\obj\x86\Debug\AzzyAIConfig.HomTactControl.resources
+X:\AI Stuff\AzzyAIConfig\obj\x86\Debug\AzzyAIConfig.MainForm.resources
+X:\AI Stuff\AzzyAIConfig\obj\x86\Debug\AzzyAIConfig.Properties.Resources.resources
+X:\AI Stuff\AzzyAIConfig\obj\x86\Debug\AzzyAIConfig.exe
+X:\AI Stuff\AzzyAIConfig\obj\x86\Debug\AzzyAIConfig.pdb
+X:\AI Stuff\AzzyAIConfig\bin\Debug\AzzyAIConfig.exe.manifest
+X:\AI Stuff\AzzyAIConfig\bin\Debug\AzzyAIConfig.application
+X:\AI Stuff\AzzyAIConfig\obj\x86\Debug\AzzyAIConfig.TrustInfo.xml
+X:\AI Stuff\AzzyAIConfig\obj\x86\Debug\AzzyAIConfig.exe.manifest
+X:\AI Stuff\AzzyAIConfig\obj\x86\Debug\AzzyAIConfig.application
+C:\Users\User\Desktop\AzzyAIConfig\bin\Debug\Documentation.txt
+C:\Users\User\Desktop\AzzyAIConfig\bin\Debug\Defaults.lua
+C:\Users\User\Desktop\AzzyAIConfig\bin\Debug\H_Config.lua
+C:\Users\User\Desktop\AzzyAIConfig\bin\Debug\H_Extra.lua
+C:\Users\User\Desktop\AzzyAIConfig\bin\Debug\H_Tactics.lua
+C:\Users\User\Desktop\AzzyAIConfig\bin\Debug\M_Config.lua
+C:\Users\User\Desktop\AzzyAIConfig\bin\Debug\M_Extra.lua
+C:\Users\User\Desktop\AzzyAIConfig\bin\Debug\M_Tactics.lua
+C:\Users\User\Desktop\AzzyAIConfig\bin\Debug\AzzyAIConfig.exe
+C:\Users\User\Desktop\AzzyAIConfig\bin\Debug\AzzyAIConfig.pdb
+C:\Users\User\Desktop\AzzyAIConfig\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\User\Desktop\AzzyAIConfig\obj\x86\Debug\AzzyAIConfig.AzzyAIAboutBox.resources
+C:\Users\User\Desktop\AzzyAIConfig\obj\x86\Debug\AzzyAIConfig.ExtraControl.resources
+C:\Users\User\Desktop\AzzyAIConfig\obj\x86\Debug\AzzyAIConfig.PvpTactControl.resources
+C:\Users\User\Desktop\AzzyAIConfig\obj\x86\Debug\AzzyAIConfig.MerTactControl.resources
+C:\Users\User\Desktop\AzzyAIConfig\obj\x86\Debug\AzzyAIConfig.HomTactControl.resources
+C:\Users\User\Desktop\AzzyAIConfig\obj\x86\Debug\AzzyAIConfig.MainForm.resources
+C:\Users\User\Desktop\AzzyAIConfig\obj\x86\Debug\AzzyAIConfig.Properties.Resources.resources
+C:\Users\User\Desktop\AzzyAIConfig\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\User\Desktop\AzzyAIConfig\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\User\Desktop\AzzyAIConfig\obj\x86\Debug\AzzyAIConfig.exe
+C:\Users\User\Desktop\AzzyAIConfig\obj\x86\Debug\AzzyAIConfig.pdb
+C:\Users\User\Desktop\AzzyAIConfig\obj\x86\Debug\GenerateResource.read.1669.tlog
+C:\Users\User\Desktop\AzzyAIConfig\obj\x86\Debug\GenerateResource.read.1672.tlog
+C:\Users\User\Desktop\AzzyAIConfig\bin\Debug\H_PVP_Tact.lua
+C:\Users\User\Desktop\AzzyAIConfig\obj\x86\Debug\AzzyAIConfig.M_PvpTactControl.resources
+C:\Users\User\Desktop\AzzyAIConfig\bin\Debug\M_PVP_Tact.lua
+F:\Desktop\AzzyAIConfig\obj\x86\Debug\AzzyAIConfig.exe
+F:\Desktop\AzzyAIConfig\obj\x86\Debug\AzzyAIConfig.pdb
+F:\Desktop\AzzyAIConfig\bin\Debug\Documentation.txt
+F:\Desktop\AzzyAIConfig\bin\Debug\M_PVP_Tact.lua
+F:\Desktop\AzzyAIConfig\bin\Debug\Defaults.lua
+F:\Desktop\AzzyAIConfig\bin\Debug\H_Config.lua
+F:\Desktop\AzzyAIConfig\bin\Debug\H_Extra.lua
+F:\Desktop\AzzyAIConfig\bin\Debug\H_Tactics.lua
+F:\Desktop\AzzyAIConfig\bin\Debug\M_Config.lua
+F:\Desktop\AzzyAIConfig\bin\Debug\M_Extra.lua
+F:\Desktop\AzzyAIConfig\bin\Debug\M_Tactics.lua
+F:\Desktop\AzzyAIConfig\bin\Debug\H_PVP_Tact.lua
+F:\Desktop\AzzyAIConfig\bin\Debug\AzzyAIConfig.exe
+F:\Desktop\AzzyAIConfig\bin\Debug\AzzyAIConfig.pdb
+F:\Desktop\AzzyAIConfig\obj\x86\Debug\AzzyAIConfig.AzzyAIAboutBox.resources
+F:\Desktop\AzzyAIConfig\obj\x86\Debug\AzzyAIConfig.M_PvpTactControl.resources
+F:\Desktop\AzzyAIConfig\obj\x86\Debug\AzzyAIConfig.ExtraControl.resources
+F:\Desktop\AzzyAIConfig\obj\x86\Debug\AzzyAIConfig.PvpTactControl.resources
+F:\Desktop\AzzyAIConfig\obj\x86\Debug\AzzyAIConfig.MerTactControl.resources
+F:\Desktop\AzzyAIConfig\obj\x86\Debug\AzzyAIConfig.HomTactControl.resources
+F:\Desktop\AzzyAIConfig\obj\x86\Debug\AzzyAIConfig.MainForm.resources
+F:\Desktop\AzzyAIConfig\obj\x86\Debug\AzzyAIConfig.Properties.Resources.resources
+F:\Desktop\AzzyAIConfig\obj\x86\Debug\AzzyAIConfig.csproj.GenerateResource.Cache
+F:\Desktop\AzzyAIConfig\obj\x86\Debug\AzzyAIConfig.csprojResolveAssemblyReference.cache

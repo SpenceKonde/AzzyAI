@@ -1,0 +1,381 @@
+Azzy AI v 1.30:
+
+A generic mercenary and homunculus AI, including graphical user interface (GUI) for configuration, and a wide variety of features.
+
+Features:
+
+    * Ability to behave aggressively or passively depending on merc/homun current hp.
+    * Ability to have specific behavior for different monsters (only practical on homun)
+    * Ability to have specific behavior for different players in pvp. 
+    * Neither merc nor homun will kill alchemist summoned plants. 
+    * Automatically use appropriate attack skill for the mercenary if configured to use skill attacks.
+    * Automatically use self-buffs if enabled. Will not recast buffs on teleport like most autobuff AIs. 
+    * Option to select level of selfbuff used by homun. 
+    * Option to "snipe" targets that can be 1-shot, without interupting attacks on another monster (homun only)
+    * Automatically use player-buffs on owner if enabled.
+    * Automatically use anti mob skills when mobbed by enough aggressive monsters (threshold configurable)
+    * Follows intelligently, can be configured to stay back a number of cells from the owner through use of the FollowStayBack option. 
+    * Option to kite targets and/or use pushback skills for archer mercenaries.
+    * Targets brandish spear to hit the most targets possible.
+    * Friendlisting (to let your mercenary/homun KS other players)
+    * Option to "dance" while attacking to bypass the aspd delay on normal attacks (homun only) or skills (mercenary only)
+    * Random Walk - autofollow your mercenary with this turned on, and let it drag you around the map.
+    * Waypoint based "Route Walk" - make a route, and autofollow your merc while it drags you around. (mercenary only)
+    * Graphical User Interface for editing of most configuration options.
+    * Customize whether your homun/merc attacks on your use of skills (casting or on skill use), or just attack. 
+    * Merc can try to detect mushrooms/herb plants, and tnot waste time on them. 
+    * When told to move to a cell, the merc will not immediately run back to the user (optional)
+    * Merc or homun can attack more aggressively when told to attack (configurable)
+    * "extra" files, where user can add their own lua code. 
+
+
+Developer Features offered in past releases are now released seperately
+
+Planned Features and fixes (general):
+    * More intelligent use of owner provoke (undetermined)
+    * Add chaotic blessing use, even though it sucks (1.31)
+    * Add a patrol mode to replace orbit walk (1.31 or later)
+    * More intelligent targeting (ongoing)
+
+Features that appear to be impossible:
+
+    * Allow the mercenaries automatically use their status recovering skills. (the mercenary cannot see if players are effected by statuses)
+    * Allow the mercenaries to identify monsters without a MobID file. 
+
+How to use AzzyAI:
+
+    * Download and extract this AI file.
+    * Place the .lua files inside the AI package in the USER_AI folder (inside the AI folder in RO folder).
+    * If you already have a homunculus AI and do not want to replace it with AzzyAI, do not copy over AI.lua
+    * If you already have a mercenary AI and do not want to replace it with AzzyAI, do not copy over AI_M.lua.
+    * If you are updating do not replace your A_Friends.lua file.
+    * If you are updating, save the settings from your config and tactics files
+    * Open H_Config.lua or M_Config.lua and set the configuration options according to your needs. The effects of the options are described in brief in the config file, and in detail below.
+    * Type /merai until it says your mercenary soldier AI has been customized, or /hoai until it says that the homunculus AI has been customized. 
+    * Summon merc/homun (or relog if it's already out, or vap/recall for homun) and have fun. 
+
+
+How to use FRIEND LIST FEATURE:
+
+   1. Place mercenary into STANDBY mode by pressing ctl+T
+   2a. Stand 1 cell to the west of a player and sit down to add them to friendlist
+   2b. Stand 1 cell to the east of a player and sit down to remove them from friendlist
+
+
+How to configure the AI using the GUI: 
+
+Open the Azzy AI Config program in your AI folder. There are 6 tabs, mercenary config, mercenary tactics, homunculus config, homunculus tactics, PVP tactics, and extra options. Make any config changes desired, and click the save button. To change tactics, you must click "Save Tact" after changing any tactics settings to save the tactic changes made. After all tactics changes are made, save the changes with the "Save" button
+
+How to manually configure the AI:
+
+The AI configuration is controlled by two files each for mercenary and homunculus AI, a config file, and a tactics file. 
+For the homunculus, these files are H_Config.lua and H_Tactics.lua respectively.
+For the mercenary, these files are M_Config.lua and M_Tactics.lua respectively - note that without an updated MobID file, the default tactics will be applied to all monsters, since mercenaries lack a way to differentiate between monster types. 
+
+To edit these files, double click the file, and when you get the message saying that windows cannot open this file, choose "Select the program from a list", and choose Notepad. Check the box "always use this program to open files of this type" 
+
+######################
+### Config options ###
+######################
+These options set the basic operating parameters of the AI. 
+
+Playing well with others:
+If you plan to have both a merc and homun out at once, set AssumeHomun to 1. This is the default. 
+
+Controlling aggro:
+Your merc/homun will seek out and attack monsters whenever it's HP % (as % of max hp, number from 0-100) is greater than AggroHP, and it's SP % is greater than AggroSP. When it lacks hp or sp, it will only fight monsters if it is attacked. Set AggroHP to 100 if you do not want the merc or homun to attack unless it, the owner, or a friend is attacked.
+The distance at which the merc/homun will target a monster to attack is set by AggroDist. Because the vision range is a 27x27 square centered on the player, high values of AggroDist will have no effect. Low values may be desirable to prevent the merc/homun from running ahead and aggroing things that might be off screen. 
+If you want your merc/homun to not fight or do anything other than watch (and kite, if set to do so), set SuperPassive to 1. This may be desirable for gaining loyalty on a mercenary by killing monsters yourself, but is generally useless for a homun.
+If you want your merc/homun to stand still, and only use ranged skills or attacks, set DoNotChase to 1. 
+
+Movement options: 
+Your merc/homun will stay FollowStayBack cells behind you when following you. Setting this to 1-2 for un ranged mercenaries, and 2-3 for archer mercenaries for best results. The merc/homun will drop everything to follow you if it is ever more than MoveBound cells away from the owner. To use the Random Walk feature, set UseRandWalk to 1 - when this is enabled, the merc/homun will walk around randomly when idle and above it's AggroHP - the player can autofollow mercenaries, so in this way you can let the mercenary drag you around the map. UseOrbitWalk will make the merc/homun circle you when idle and above it's AggroHP, however this behavior is largely useless, and awkward behavior has been observed with it, so it's use is not recommended. 
+
+"Sticky Move" Normally, when you tell your merc or homun to walk someplace, it will walk right back if that is farther than FollowStayBack. This is often not desired. 
+When MoveSticky is set to 1, the retainer will stay put when told to move someplace unless you try to walk off screen, or go into standby, etc. If MoveStickyFight is set to 1, it will also fight normally from this new location. 
+
+When you sit down, your merc/homun will go non-aggressive, and if it isn't doing anything else, it will move close to you. Set the location it will move to with the RestXOff,RestYOff parameters.
+Ex:
+RestXOff =0
+RestYOff =-2 
+will make your merc stand 2 cells to the south of you when you sit. 
+This can be turned off with the DoNotUseRest option. 
+
+Standby Options:
+When put into standby mode (alt+t for homun, ctl+t for merc) the merc will behave less aggressively. Set DefendStandby to 1 to make the merc fight normally when in standby, and StickyStandby to make it return to standby mode after fighting/told to move/etcetera. 
+
+Upon spawning, the mercenary will wait for SpawnDelay (in ms) before taking any actions. This prevents it from wasting it's immunity time, and also prevents it from KSing after teleporting or changing maps. Setting SpawnDelay to 1000 (1 second) is a good idea.
+
+ChaseGiveUp: When chasing monsters, if the merc/homun is not able to reach the target, it will eventually give up and look for a new target. ChaseGiveUp is the number of times it will attempt to move to the target before giving up. As of version 1.30, this feature actually works as intended.
+
+Kiting options:
+When using archer mercenaries, it is frequently advantageous for the mercenary to try to run away from monsters that try to attack it, while attacking them. Set KiteMonsters to 1 to turn this on. If KiteParanoid is set to 1, it will default to running away from monsters, even if they don't attack it - this can be overridden by the tactics list. By default, if KiteMonsters is set to 1, kiting will only be done on archer mercenaries - to make it kite even with melee mercenaries, set ForceKite to 1. This results is very strange behavior if the mercenary is supposed to be attacking, and is not recommended. The other kiting parameters define the specifics of kiting behavior, and it is recommended to not change them.
+
+Automatic use of skills:
+
+Turn on UseAutoSkill to automatically use offensive skills when attacking. To use only skills, and never normal attacks, also set UseSkillOnly to 1, to use attack skill even when chasing, set UseSkillOnly to -1. If the mercenary has an anti mob skill, it will be automatically used if the number of monsters in close proximity to the mercenary or owner is equal to or greater than AutoMobCount.
+
+To conserve SP, you may limit the number of times a mercenary will use skills on any single target - this is controlled by AutoSkillLimit. It defaults to 100 (effectively unlimited), set this to another number to limit the number of times skills will be used. Also to control SP use, you may want to not use auto skills unless there would be enough sp left to recast some sort of buff. Set UseAutoSkill_MinSP to this minimum SP value to do this.
+AutoSkillDelay is the delay (in ms) between uses of a skill. If you are having problems with the mercenary "double casting" skills, increase this value. Otherwise, leave it be. 
+When using lancer mercenaries with Pierce, you may want it to use pierce only on monsters of certain sizes. Set UsePierceSize to the minimum size you want to use pierce on (small is 1, medium 2, large is 3). Note that this will not work unless an updated MobID file is present and the sizes are set in the tactics file. 
+
+Buffs and duration skills:
+Many mercenaries and homunculi have buff skills with a specific duration. Turn these skills on to keep the appropriate buff up at all times (if the mercenary has the applicable buff). 
+UseAutoQuicken (includes filer skill, Flitting, and Lif skill Urgent Escape), UseAutoGuard (includes Amistr skill, Amistr Bulwark) UseAutoSight, and UseAutoMag. Likewise they can use buff skills on their owner, UseProvokeOwner to use the mercenary's highest level of provoke on the owner, and UseSacrificeOwner to use Sacrifice on the owner. 
+
+Automatic Pushback:
+Archer mercenaries often have a skill that can push enemies backwards. This can drastically reduce mortality of archer type mercenaries, which are often astonishingly fragile. Set UseAutoPushback to 1 to enable use of pushback - this is subject to override by the tactics list. AutoPushbackThreshold is the distance between the merc and target at which the mercenary will attempt to use a pushback skill on it. 
+
+Automatic use of Debuffs: 
+This is covered by the tactics, due to the potentially monster-specific nature of debuff skills.
+
+Automatic use of Chaotic Blessing:
+This is not yet supported. 
+
+Berzerk Mode:
+You can have your retainer become more aggressive in a number of situations. 
+UseBerzerkSkill (go berzerk when manually told to use a skill on a target)
+UseBerzerkAttack (go berzerk when manually told to attack a target)
+UseBerzerkMobbed (go berzerk when "mobbed" by monsters. Set to 0 to turn off, or any other number to go berzerk when that many monsters are attacking)
+The behavior while in berzerk mode is defined by:
+Berzerk_SkillAlways (always use offensive skills, regardless of tactics, when in berzerk mode)
+Berzerk_Dance (use dance aspd bypass while in berzerk mode, even if set not to)
+
+An example of this use might be, melee with endowed weapon and (ex) lvl 8 spear merc in goats, and a low skill use limit to conserve sp. When a harpy shows up, you tell your merc to pierce it once, and it goes berzerk and spams pierce on it with dance bypass until it's dead, and then returns to normal behavior. 
+
+#######################
+### Tactics options ###
+#######################
+
+The tactics list consists of an entry for each kind of monster you plan to be fighting. In order for any entry other than the default entry to be used on a mercenary, you must have an updated MobID file for the map and server you are on. For each entry, there are 7 fields for different settings. The format of a tactics list entry is:
+
+MyTact[id]={TACT_BASIC,TACT_SKILL,TACT_KITE,TACT_CAST,TACT_PUSHBACK,TACT_DEBUFF,TACT_SIZE,TACT_RESCUE}
+
+id is the type id of the monster MyTact[0] is the default tactics used for any monster for which there is no tactics entry. 
+
+TACT_BASIC controls when it will attack a monster. The options for this are:
+TACT_TANK	(Hit monster once, and then hold it until something kills it)
+TACT_IGNORE	(Do not attack the monster, at all)
+TACT_ATTACK_L	(Seek out and attack this monster, low priority, do not give higher priority if attacking)
+TACT_ATTACK_M	(Seek out and attack this monster, medium priority)
+TACT_ATTACK_H	(Seek out and attack this monster, high priority)
+TACT_REACT_L	(React to this monster when self/owner/friend attacked, low priority)
+TACT_REACT_M	(React to this monster when self/owner/friend attacked, medium priority)
+TACT_REACT_H	(React to this monster when self/owner/friend attacked, high priority)
+TACT_REACT_SELF (React to this monster when self attacked only)
+TACT_SNIPE_L	(Attempt to 1-shot this monster with bolts, even while attacking other monsters, low priority)
+TACT_SNIPE_M	(Attempt to 1-shot this monster with bolts, even while attacking other monsters, medium priority)
+TACT_SNIPE_H	(Attempt to 1-shot this monster with bolts, even while attacking other monsters, high priority)
+
+
+TACT_SKILL controls how many times an offensive skill will be used on a target of this type.
+* Set to SKILL_NEVER to never use skills, and SKILL_ALWAYS to always use skills. 
+* Set to a positive number to use a skill that number of times.
+* Set to a negative number to use a level of the attack skill less than the maximum level. 
+  This ONLY works with homunculus (merc skills arent level selectable)
+  This is the proper setting for SNIPE tactics. 
+
+TACT_KITE controls whether to kite from this target, if kiting is enabled.
+KITE_NEVER (never kite from this kind of monster)
+KITE_REACT (kite from this kind of monster only if attacked)
+KITE_ALWAYS (always kite from this monster - recommended for aggressive monsters)
+
+TACT_CAST controls whether to assume casts from this monster are aggressive acts. This is not very useful in pvm, except to stop homun from killing summoned geographers. The options are CAST_REACT and CAST_PASSIVE. 
+
+TACT_PUSHBACK controls whether to use pushback skills, if applicable.
+The options are PUSH_NEVER, PUSH_SELF, and PUSH_FRIEND (use pushback skills on monsters attacking friend and owner as well as self). 
+
+TACT_DEBUFF controls what, if any, debuff skills will be used. 
+Set to the ID of the skill, or the name of the skill used in SkillList.lua to use that skill. Set it to that negative value to use that debuff while chasing. Set to 1 or -1 to use whatever debuff the merc might have - this can include provoke. 
+
+TACT_SIZE is the size of the monster for UsePierceSize. Options are
+SIZE_SMALL, SIZE_MEDIUM, SIZE_LARGE and SIZE_UNDEFINED. Default is SIZE_UNDEFINED.
+
+TACT_RESCUE controls whether the homun or merc will drop everything to come to the rescue of the owner/friends or the other merc if this monster is attacking them.
+Set to 1 to drop everything to aid the owner/friends. 
+Set to 2 to drop everything to aid the merc or homun (whichever this is not, ie, if this is set in the homun config, the homun will come to the rescue of the owner's mercenary - this is desirable particularly when afking with archer mercenaries)
+
+
+Advanced Settings:
+Targeting on things like skill use and casting:
+Open the file H_FriendMotion. Change the value on each line to a 1 to attack the target if the homun sees the owner or a friend performing that motion on a monster/player.
+
+Route Walk:
+Mercenaries support Route Walk. This is similar to random walk, in that you are expected to autofollow the mercenary when using it, and let the mercenary drag you around. 
+To enable it, set UseRouteWalk to 1, or enable it in the AI. 
+Now, for the map you are leveling on, you must make a "route" file. 
+This is Route.lua. 
+The file has just one line, which is a list of n walkable cells, each within move bounds of the points adjacent to it.
+The format is:
+MyRoute={{x1,y1},{x2,y2}, ... {xn,yn}}
+The default route:
+MyRoute={{160,360},{165,366},{174,366},{174,357},{166,351},{158,355}} is for just south of the north morroc kafra, and will walk in a rectangle pattern there
+For practical purposes, it may require many more points, so making this list for your map can be a laborious task. 
+Set UseCircleWalk if the last point is within MoveBounds of the first one, otherwise, leave it at 0 and the mercenary will reverse direction when it reaches the end.
+
+###################
+## Extra Options ##
+###################
+
+The M_Extra and H_Extra files provide a space for users to write additional code to modify the behavior of the AI. 
+
+Currently the AutoDetectPlants option is implemented here.
+
+An example of an option (requested by a user) which would change the tactics based on the presence or absence of another player - which would be too complicated to add via conventional options - is shown as an example, commented out. These extra files are loaded last, so you may replace any function(s) through these files. 
+
+
+Version History
+1.30
+New GUI configurating program by Machiavellian. Please give feedback on this. 
+Added support for new monster mercenaries: Doppleganger, Egnigem Cenia, and Alice. 
+Added feature to not return to owner when told to move beyond following distance. 
+Added berzerk mode feature.
+Implemented data gathering to identify herb plants (AutoDetectPlants)
+Improved obstacle handling while chasing and while attacking.
+Reduced number of files in the AI to reduse clutter. 
+Added extra options files
+Fixed issue with sword mercenaries not using single target skills.
+Fixed issue with some monster mercenary skills not working correctly.
+Fixed issue with pvp just plain not working. 
+Fixed issue with pushback bugging the merc.
+Fixed issue with retainer not using skills when trying to tank.
+Fixed issue where deletion of H_ID.txt or M_ID.txt would cause crashes.
+General minor improvements. 
+
+1.29
+Added support for Wild Rose monster mercenaries.
+
+1.282
+Fixed 2 month old problem with bowling bash discovered during xmas lucky box event (affected level 8, 9, and 10 fencers)
+Made AI behavior with Focused Arrow Strike less full of fail.
+Corrected AI behavior to account for DS not being dancable.
+
+1.281
+Fixed 4 month old problem with autosac that was first reported to me today
+Fixed issue where homun would use skills in a manner contrary to tactics settings with Skill While Chasing selected, take two.
+
+1.28
+Fixed stack overflows involving the fast change responsivity optimizations. 
+Fixed some random crash problem. 
+Fixed issue where homun would use skills in a manner contrary to tactics settings with Skill While Chasing selected. 
+Fixed issue where homun or merc would refuse to use skills when mobbed. 
+Fixed issue where GUI would improperly save several settings. 
+Added GUI support for future implementation of Chaotic Blessing use (albeit in a terrible manner)
+
+1.271
+Fixed GetTick error
+
+1.27
+Fixed bug with buff skills.
+Added sniping tactics.
+Added support for using debuff skills.
+Added support for selecting levels of skills to use (for homun; merc skills are not level selectable)
+Added basic emulation of MirAI friendlisting. Still doesnt do the movement upon friending.
+Homun/Merc will now KS if you tell it to attack or skill on a monster that is fighting another player
+Various minor fixes/tweaks
+Updated AI to control features added with 1.26 and 1.27. 
+
+1.263
+Fixed line 1344 error.
+Added DoNotUseRest option.
+Added StickyStandby and DefendStandby options.
+
+1.262
+Fixed line 1851 error.
+
+1.261
+Removed bug with offencive skills and attacks (added in 1.26)
+Fixed bug with the autofriend added in 1.26 which prevented proper friending of merc/homun.
+
+1.26 (GUI v1.25, AI v1.26)
+Homun and merc are now always friended to eachother using H_ID and M_ID files. Disable this by changing NewAutoFriend to 0 in defaults.lua. 
+Dance Attack works now. 
+Support for a new target class on mercs: Summons. Now there is an option for Default Summon, which is the default behavior for any summon or retainer not friended to the mercenary. This should probably be left as is (react low), so that mercs will not kill summoned plants, even if aggressive. 
+Support for more sophisticated targeting of player/friend's enemies - targeting when player uses skills or is casting. Configured in H_FriendMotion and M_FriendMotion files. 
+Improved use of buffs - will now not recast buffs right after spawning in if they're still up. This is particularly important with guard, which apparently works the same way as the player skill, being taken down when recast. 
+Yet another attempt at fixing route walk. This one appears to have been marginally successful!
+Added bug that prevented mercenary from using offensive skills or attacks, and caused homunculus to attempt to use skills improperly. 
+
+
+1.25a (GUI v1.25, AI v1.21) 
+Minor GUI improvements, support for v1.25 features, including debuffing, which is not implemented in the AI yet. 
+Numerous minor tweaks to AI behavior that should significantly improve targeting and antiKS behavior. 
+Routewalk nolonger crashes the client; it fails gracefully instead. 
+Dance attack temporarally out of order (something went wrong trying to improve it)
+Errors if the default AI was not installed fixed for good. 
+
+1.20 Release
+GUI Improvements
+Dance mode nolonger sucks ass (or atleast, not as much). 
+Fixed bug causing dependance on the default AI being in the \AI\ folder
+Various targeting changes for improved target selection:
+	Fixed detection of owner/friend targets. Nobody reported it - not my fault it was a huge, gaping flaw! 
+	Will now finish killing monsters that are on the owner/friend/self, before aggroing more targets.
+	Monsters with the ATTACK_LOW and REACT_LOW priority are excempt from that - they will be ignored, even if attacking the owner/self/friend, if there are higher priority targets to attack. 
+Made an attempt at fixing use of skills while chasing. 
+Debuff while chasing still doesnt work, but using attack skills while chasing does.
+
+
+1.20b0
+GUI for config
+Minor bugfixes
+Subtle changes to default config files and structure to make GUI easier to write.
+TACTIC_IGNORE option removed for GUI compatability.
+
+1.09
+Added basic pvp support
+Removed bug with DoNotChase and UseSkillOnly
+Improved targeting speed
+
+
+1.08
+Added homunculus support. 
+Added use debuff skills, but it doesnt work.
+Added DoNotChase option
+Recoded chasing routine, so it doesnt suck like it used to.
+Fixed and tweaked a whole ton of stuff that i don't even remember. 
+Added defaults file, so that missing lines from config wont choke the AI. 
+Fixed unacceptable following behavior with archers, specifically in combination with AutoPushback
+Fixed friending bug.
+
+1.071
+Fixed new bug with follow command.
+
+1.07
+Added full tactlist support based on actor IDs, MobID file required.
+Fixed bug with follow command (standby mode)
+Added another bug with follow command (standby mode)
+Added support for live friending and unfriending
+Added support for autofriending of homunculus.
+
+1.061: 
+Fixed showstopper bug in 1.06
+
+1.06: 
+Added feature to autocast provoke or sacrifice on user. 
+Added feature to auto use pushback skills (arrow repel and skid trap) if monsters are on the merc (doesn't work great). 
+Added feature to make the merc go non-aggro if the player sits down. 
+Added option to limit the number of times merc will use skills on a given enemy. 
+Did work on future support of tactics based on actor IDs. 
+Observed and captured several minor bugs with target acquisition for study (will be fixed later). 
+Fixed bug with random walk. 
+Improved friending AI (thanks Biochemist-ness)
+Expanded motion list in Const_.lua for future expansion. 
+Dug up and fixed buried treasure in the follow command processing routine. 
+
+1.05: 
+Recoded following to support following at distance (FollowStayBack), 
+Fast transition from Chase to Attack, 
+Added kiting support - it still leaves something to be desired, but i'm not sure what it's doing wrong... Poslag really hurts it bad. 
+Also added an option to only use skill attacks. 
+Added bug with random walk.
+
+1.04: Fixed crash on load bug (line 873 error)
+
+1.03: Added SuperPassive option, fixed random crash error (line 903 error). Added crash on load bug.
+
+1.02: Successfully made AI coexist with MirAI
+
+1.01: Unsuccessfully made AI coexist with MirAI
+
+1.00: Initial release 

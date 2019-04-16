@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<asmv1:assembly manifestVersion="1.0" xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1">
+  <asmv1:assemblyIdentity version="1.5.0.0" name="AzzyAIConfig.exe" publicKeyToken="cd85927bb592d407" language="neutral" processorArchitecture="x86" type="win32" />
+  <application />
+  <entryPoint>
+    <assemblyIdentity name="AzzyAIConfig" version="1.30.0.29642" language="neutral" processorArchitecture="x86" />
+    <commandLine file="AzzyAIConfig.exe" parameters="" />
+  </entryPoint>
+  <trustInfo>
+    <security>
+      <applicationRequestMinimum>
+        <PermissionSet version="1" class="System.Security.NamedPermissionSet" Name="LocalIntranet" Description="Default rights given to applications on the local intranet" Unrestricted="true" ID="Custom" SameSite="site" />
+        <defaultAssemblyRequest permissionSetReference="Custom" />
+      </applicationRequestMinimum>
+      <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
+        <!-- UAC Manifest Options
+            If you want to change the Windows User Account Control level replace the 
+            requestedExecutionLevel node with one of the following.
+
+        <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
+        <requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
+        <requestedExecutionLevel  level="highestAvailable" uiAccess="false" />
+
+            Specifying requestedExecutionLevel node will disable file and registry virtualization.
+            If you want to utilize File and Registry Virtualization for backward 
+            compatibility then delete the requestedExecutionLevel node.
+        -->
+        <requestedExecutionLevel level="asInvoker" uiAccess="false" />
+      </requestedPrivileges>
+    </security>
+  </trustInfo>
+  <dependency>
+    <dependentOS>
+      <osVersionInfo>
+        <os majorVersion="5" minorVersion="1" buildNumber="2600" servicePackMajor="0" />
+      </osVersionInfo>
+    </dependentOS>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.Windows.CommonLanguageRuntime" version="4.0.30319.0" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="AzzyAIConfig.exe" size="327168">
+      <assemblyIdentity name="AzzyAIConfig" version="1.30.0.29642" language="neutral" processorArchitecture="x86" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>WG81Zgl1a9dvqxhfd8NvVaWGCCc=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <file name="Documentation.txt" size="26137">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>v6mntfUeWQwMPMVJNjbBCULszpo=</dsig:DigestValue>
+    </hash>
+  </file>
+  <compatibility xmlns="urn:schemas-microsoft-com:compatibility.v1">
+    <application>
+      <!-- A list of all Windows versions that this application is designed to work with. Windows will automatically select the most compatible environment.-->
+      <!-- If your application is designed to work with Windows 7, uncomment the following supportedOS node-->
+      <!--<supportedOS Id="{35138b9a-5d96-4fbd-8e2d-a2440225f93a}"/>-->
+    </application>
+  </compatibility>
+<publisherIdentity name="CN=AZZYLAPTOP\Spence Konde" issuerKeyHash="4766fcf0a0874a92ff42cd0ecea9d74c46884772" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>BAuE0+iRt/IGe65wcbZ1au2wJ8U=</DigestValue></Reference></SignedInfo><SignatureValue>C0XTSQdBXn62e8gZFBp5bF5SooRSERlJft6KWRvI9sattGkWqJK2vny7B2Hdopx6aCW4+8Oc3WRg8sn+nIMTMQiOsHs8aqqkexWoMHXpimd1vfeQs4RRpZ28kilB3GEbS44JFSCGEG028r3qcL0s7rUmfjDefliTjr/FA0tNeLs=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>wGyGDSoMFJXluBGnZozPZV+TxgDDqPP1wVjs2/X6UQ9DmWxibYCWT5ZXftd5rBFBTq7H3m7hq8zf/+c43LQXqTe7b0o2I+ZGnzTnQsZy5HO2q0v1pfQJ/pCQkcvxhGwCcE1N8+PRbnuDoM6e08o4p/KnjMQxlmbO3TsnwEUZ9rM=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="c527b0ed6a75b67170ae7b06f2b791e8d3840b04" Description="" Url=""><as:assemblyIdentity version="1.5.0.0" name="AzzyAIConfig.exe" publicKeyToken="cd85927bb592d407" language="neutral" processorArchitecture="x86" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=AZZYLAPTOP\Spence Konde</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>7GwuC3P6cr3P9LAcSsGCJ3eaXl8=</DigestValue></Reference></SignedInfo><SignatureValue>bzBtdcIw3K7dVsybzBJH3fKneoV7JdeJi0HCFa2jq6dIa6CM6hytS/ygVldLNcWd/LXsl90qbJoKSyzLbZHd/SWMMWYOF2Lbxj8RBvyvM9uFn3D7xVK679rBoKQiQEsdt10hocdDSfC/hjrODij+DhxmrjCQ/vukoo5eenXoJo8=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>wGyGDSoMFJXluBGnZozPZV+TxgDDqPP1wVjs2/X6UQ9DmWxibYCWT5ZXftd5rBFBTq7H3m7hq8zf/+c43LQXqTe7b0o2I+ZGnzTnQsZy5HO2q0v1pfQJ/pCQkcvxhGwCcE1N8+PRbnuDoM6e08o4p/KnjMQxlmbO3TsnwEUZ9rM=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIB7TCCAVqgAwIBAgIQQqwKJbF/aoNLjDIb7LTXyzAJBgUrDgMCHQUAMDkxNzA1BgNVBAMeLgBBAFoAWgBZAEwAQQBQAFQATwBQAFwAUwBwAGUAbgBjAGUAIABLAG8AbgBkAGUwHhcNMTEwMjAzMDY0NzI5WhcNMTIwMjAzMTI0NzI5WjA5MTcwNQYDVQQDHi4AQQBaAFoAWQBMAEEAUABUAE8AUABcAFMAcABlAG4AYwBlACAASwBvAG4AZABlMIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDAbIYNKgwUleW4EadmjM9lX5PGAMOo8/XBWOzb9fpRD0OZbGJtgJZPlld+13msEUFOrsfebuGrzN//5zjctBepN7tvSjYj5kafNOdCxnLkc7arS/Wl9An+kJCRy/GEbAJwTU3z49Fue4Ogzp7Tyjin8qeMxDGWZs7dOyfARRn2swIDAQABMAkGBSsOAwIdBQADgYEAF+fULHP2FKSCR9HwsNIV19O46t5Qf8SqgiPzCrREdDfLOuH8MzX6NKGiAhNoqI/KQ7NFnX0b5Bt0CiKw+a8SjJWpaY7zmiYAytowQUyLG8d8SNwjFMvYR+teXeKNt564e1a/pllrtNWrOeWyHfLBOirvU7rshG68Ou4ZxhFxWCc=</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>

@@ -1,0 +1,81 @@
+X:\AI Stuff\AzzyAIConfig\bin\Release\Documentation.txt
+X:\AI Stuff\AzzyAIConfig\bin\Release\Defaults.lua
+X:\AI Stuff\AzzyAIConfig\bin\Release\H_Config.lua
+X:\AI Stuff\AzzyAIConfig\bin\Release\H_Extra.lua
+X:\AI Stuff\AzzyAIConfig\bin\Release\H_Tactics.lua
+X:\AI Stuff\AzzyAIConfig\bin\Release\M_Config.lua
+X:\AI Stuff\AzzyAIConfig\bin\Release\M_Extra.lua
+X:\AI Stuff\AzzyAIConfig\bin\Release\M_Tactics.lua
+X:\AI Stuff\AzzyAIConfig\bin\Release\PVP_Tact.lua
+X:\AI Stuff\AzzyAIConfig\bin\Release\AzzyAIConfig.exe
+X:\AI Stuff\AzzyAIConfig\bin\Release\AzzyAIConfig.pdb
+X:\AI Stuff\AzzyAIConfig\obj\x86\Release\ResolveAssemblyReference.cache
+X:\AI Stuff\AzzyAIConfig\obj\x86\Release\AzzyAIConfig.AzzyAIAboutBox.resources
+X:\AI Stuff\AzzyAIConfig\obj\x86\Release\AzzyAIConfig.ExtraControl.resources
+X:\AI Stuff\AzzyAIConfig\obj\x86\Release\AzzyAIConfig.PvpTactControl.resources
+X:\AI Stuff\AzzyAIConfig\obj\x86\Release\AzzyAIConfig.MerTactControl.resources
+X:\AI Stuff\AzzyAIConfig\obj\x86\Release\AzzyAIConfig.HomTactControl.resources
+X:\AI Stuff\AzzyAIConfig\obj\x86\Release\AzzyAIConfig.MainForm.resources
+X:\AI Stuff\AzzyAIConfig\obj\x86\Release\AzzyAIConfig.Properties.Resources.resources
+X:\AI Stuff\AzzyAIConfig\obj\x86\Release\AzzyAIConfig.exe
+X:\AI Stuff\AzzyAIConfig\obj\x86\Release\AzzyAIConfig.pdb
+X:\AI Stuff\AzzyAIConfig\bin\Release\AzzyAIConfig.exe.manifest
+X:\AI Stuff\AzzyAIConfig\bin\Release\AzzyAIConfig.application
+X:\AI Stuff\AzzyAIConfig\obj\x86\Release\AzzyAIConfig.TrustInfo.xml
+X:\AI Stuff\AzzyAIConfig\obj\x86\Release\AzzyAIConfig.exe.manifest
+X:\AI Stuff\AzzyAIConfig\obj\x86\Release\AzzyAIConfig.application
+Z:\AI Stuff\AzzyAIConfig\obj\x86\Release\AzzyAIConfig.exe
+Z:\AI Stuff\AzzyAIConfig\obj\x86\Release\AzzyAIConfig.pdb
+V:\AI Stuff\AzzyAIConfig\obj\x86\Release\AzzyAIConfig.exe
+V:\AI Stuff\AzzyAIConfig\obj\x86\Release\AzzyAIConfig.pdb
+V:\AI Stuff\AzzyAIConfig\obj\x86\Release\ResolveAssemblyReference.cache
+V:\AI Stuff\AzzyAIConfig\obj\x86\Release\AzzyAIConfig.AzzyAIAboutBox.resources
+V:\AI Stuff\AzzyAIConfig\obj\x86\Release\AzzyAIConfig.ExtraControl.resources
+V:\AI Stuff\AzzyAIConfig\obj\x86\Release\AzzyAIConfig.PvpTactControl.resources
+V:\AI Stuff\AzzyAIConfig\obj\x86\Release\AzzyAIConfig.MerTactControl.resources
+V:\AI Stuff\AzzyAIConfig\obj\x86\Release\AzzyAIConfig.HomTactControl.resources
+V:\AI Stuff\AzzyAIConfig\obj\x86\Release\AzzyAIConfig.MainForm.resources
+V:\AI Stuff\AzzyAIConfig\obj\x86\Release\AzzyAIConfig.Properties.Resources.resources
+V:\AI Stuff\AzzyAIConfig\obj\x86\Release\GenerateResource.read.1.tlog
+V:\AI Stuff\AzzyAIConfig\obj\x86\Release\GenerateResource.write.1.tlog
+V:\AI Stuff\AzzyAIConfig\bin\Release\Documentation.txt
+V:\AI Stuff\AzzyAIConfig\bin\Release\Defaults.lua
+V:\AI Stuff\AzzyAIConfig\bin\Release\H_Config.lua
+V:\AI Stuff\AzzyAIConfig\bin\Release\H_Extra.lua
+V:\AI Stuff\AzzyAIConfig\bin\Release\H_Tactics.lua
+V:\AI Stuff\AzzyAIConfig\bin\Release\M_Config.lua
+V:\AI Stuff\AzzyAIConfig\bin\Release\M_Extra.lua
+V:\AI Stuff\AzzyAIConfig\bin\Release\M_Tactics.lua
+V:\AI Stuff\AzzyAIConfig\bin\Release\PVP_Tact.lua
+V:\AI Stuff\AzzyAIConfig\bin\Release\AzzyAIConfig.exe.manifest
+V:\AI Stuff\AzzyAIConfig\bin\Release\AzzyAIConfig.application
+V:\AI Stuff\AzzyAIConfig\bin\Release\AzzyAIConfig.exe
+V:\AI Stuff\AzzyAIConfig\bin\Release\AzzyAIConfig.pdb
+V:\AI Stuff\AzzyAIConfig\obj\x86\Release\AzzyAIConfig.TrustInfo.xml
+V:\AI Stuff\AzzyAIConfig\obj\x86\Release\AzzyAIConfig.exe.manifest
+V:\AI Stuff\AzzyAIConfig\obj\x86\Release\AzzyAIConfig.application
+C:\Users\User\Desktop\AzzyAIConfig\obj\x86\Release\AzzyAIConfig.exe
+C:\Users\User\Desktop\AzzyAIConfig\obj\x86\Release\AzzyAIConfig.pdb
+C:\Users\User\Desktop\AzzyAIConfig\bin\Release\Documentation.txt
+C:\Users\User\Desktop\AzzyAIConfig\bin\Release\M_PVP_Tact.lua
+C:\Users\User\Desktop\AzzyAIConfig\bin\Release\Defaults.lua
+C:\Users\User\Desktop\AzzyAIConfig\bin\Release\H_Config.lua
+C:\Users\User\Desktop\AzzyAIConfig\bin\Release\H_Extra.lua
+C:\Users\User\Desktop\AzzyAIConfig\bin\Release\H_Tactics.lua
+C:\Users\User\Desktop\AzzyAIConfig\bin\Release\M_Config.lua
+C:\Users\User\Desktop\AzzyAIConfig\bin\Release\M_Extra.lua
+C:\Users\User\Desktop\AzzyAIConfig\bin\Release\M_Tactics.lua
+C:\Users\User\Desktop\AzzyAIConfig\bin\Release\H_PVP_Tact.lua
+C:\Users\User\Desktop\AzzyAIConfig\bin\Release\AzzyAIConfig.exe
+C:\Users\User\Desktop\AzzyAIConfig\obj\x86\Release\ResolveAssemblyReference.cache
+C:\Users\User\Desktop\AzzyAIConfig\obj\x86\Release\AzzyAIConfig.AzzyAIAboutBox.resources
+C:\Users\User\Desktop\AzzyAIConfig\obj\x86\Release\AzzyAIConfig.M_PvpTactControl.resources
+C:\Users\User\Desktop\AzzyAIConfig\obj\x86\Release\AzzyAIConfig.ExtraControl.resources
+C:\Users\User\Desktop\AzzyAIConfig\obj\x86\Release\AzzyAIConfig.PvpTactControl.resources
+C:\Users\User\Desktop\AzzyAIConfig\obj\x86\Release\AzzyAIConfig.MerTactControl.resources
+C:\Users\User\Desktop\AzzyAIConfig\obj\x86\Release\AzzyAIConfig.HomTactControl.resources
+C:\Users\User\Desktop\AzzyAIConfig\obj\x86\Release\AzzyAIConfig.MainForm.resources
+C:\Users\User\Desktop\AzzyAIConfig\obj\x86\Release\AzzyAIConfig.Properties.Resources.resources
+C:\Users\User\Desktop\AzzyAIConfig\obj\x86\Release\GenerateResource.read.1.tlog
+C:\Users\User\Desktop\AzzyAIConfig\obj\x86\Release\GenerateResource.write.1.tlog
+C:\Users\User\Desktop\AzzyAIConfig\bin\Release\AzzyAIConfig.pdb
