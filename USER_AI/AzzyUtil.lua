@@ -2066,7 +2066,7 @@ function GetMobSkill(myid)
 			elseif htype==DIETER and UseDieterLavaSlide==1 and LavaSlideMode==0 then
 				skill=MH_LAVA_SLIDE
 				if DieterLavaSlideLevel==nil then
-					level=5
+					level=10
 				else
 					level=DieterLavaSlideLevel
 				end
@@ -2198,7 +2198,7 @@ function	GetSOwnerBuffSkill(myid)
 			skillopt=UseEiraOveredBoost
 		elseif	(htype==DIETER and UseDieterPyroclastic~=0) then
 			skill=MH_PYROCLASTIC
-			level = 5
+			level = 10
 			skillopt=UseDieterPyroclastic
 		end
 		return skill,level,skillopt
@@ -2222,7 +2222,7 @@ function GetSightOrAoE(myid)
 		htype=GetV(V_HOMUNTYPE,myid)
 		if	(htype==DIETER and UseDieterLavaSlide==1 and LavaSlideMode~=0) then
 			skill=MH_LAVA_SLIDE
-			level = 5
+			level = 10
 			skillopt=LavaSlideMode
 		elseif (htype==SERA and PoisonMistMode~=0 and UseSeraPoisonMist==1) then
 			skill=MH_POISON_MIST
