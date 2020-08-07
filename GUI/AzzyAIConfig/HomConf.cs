@@ -1902,9 +1902,9 @@ namespace AzzyAIConfig
                 {
                     _DieterLavaSlideLevel = 1;
                 }
-                else if (value > 5)
+                else if (value > 10)
                 {
-                    _DieterLavaSlideLevel = 5;
+                    _DieterLavaSlideLevel = 10;
                 }
                 else
                 {
