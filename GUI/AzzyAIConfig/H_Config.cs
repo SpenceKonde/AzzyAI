@@ -450,6 +450,10 @@ namespace AzzyAIConfig
             {
                 UseDieterPyroclastic = Convert.ToInt32(Regex.Match(file, "UseDieterPyroclastic\\s*=\\s*-?\\d+", RegexOptions.Multiline).Value.Split('=')[1].Trim());
             }
+            if (Regex.IsMatch(file, "DieterPyroclasticLevel\\s*=\\s*-?\\d+", RegexOptions.Multiline))
+            {
+                DieterPyroclasticLevel = Convert.ToInt32(Regex.Match(file, "DieterPyroclasticLevel\\s*=\\s*-?\\d+", RegexOptions.Multiline).Value.Split('=')[1].Trim());
+            }
             if (Regex.IsMatch(file, "UseEiraOveredBoost\\s*=\\s*-?\\d+", RegexOptions.Multiline))
             {
                 UseEiraOveredBoost = Convert.ToInt32(Regex.Match(file, "UseEiraOveredBoost\\s*=\\s*-?\\d+", RegexOptions.Multiline).Value.Split('=')[1].Trim());
@@ -1468,6 +1472,14 @@ namespace AzzyAIConfig
             {
                 file = string.Format("{1}{0}{2,-25}= {3}", Environment.NewLine, file, "UseDieterPyroclastic", UseDieterPyroclastic);
             }
+            if (Regex.IsMatch(file, "DieterPyroclasticLevel\\s*=\\s*(\\d+|-\\d+)", RegexOptions.Multiline))
+            {
+                file = Regex.Replace(file, "(DieterPyroclasticLevel\\s*=\\s*)(\\d+|-\\d+)", string.Format("{0,-25}= {1}", "DieterPyroclasticLevel", DieterPyroclasticLevel), RegexOptions.Multiline);
+            }
+            else
+            {
+                file = string.Format("{1}{0}{2,-25}= {3}", Environment.NewLine, file, "DieterPyroclasticLevel", DieterPyroclasticLevel);
+            }
             if (Regex.IsMatch(file, "UseEiraOveredBoost\\s*=\\s*(\\d+|-\\d+)", RegexOptions.Multiline))
             {
                 file = Regex.Replace(file, "(UseEiraOveredBoost\\s*=\\s*)(\\d+|-\\d+)", string.Format("{0,-25}= {1}", "UseEiraOveredBoost", UseEiraOveredBoost), RegexOptions.Multiline);
@@ -2422,6 +2434,12 @@ namespace AzzyAIConfig
         {
             get { return _UseDieterPyroclastic; }
             set { _UseDieterPyroclastic = value; }
+        }
+        static int _DieterPyroclasticLevel = 0;
+        public static int DieterPyroclasticLevel
+        {
+            get { return _DieterPyroclasticLevel; }
+            set { _DieterPyroclasticLevel = value; }
         }
         static int _UseEiraOveredBoost = 0;
         public static int UseEiraOveredBoost
