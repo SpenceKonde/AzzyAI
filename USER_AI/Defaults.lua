@@ -89,7 +89,7 @@ EleanorSonicClawLevel		=5
 EleanorSilverveinLevel		=5
 EleanorMidnightLevel		=5
 UseDieterLavaSlide			=1 
-DieterLavaSlideLevel		=5
+DieterLavaSlideLevel		=10
 
 
 --Autobuff options
@@ -114,6 +114,7 @@ UseBayeriGoldenPherze	=0
 UseDieterMagmaFlow	=0
 UseDieterGraniticArmor	=0
 UseDieterPyroclastic	=0
+DieterPyroclasticLevel	=10
 UseEiraOveredBoost		=0
 
 --AutoHeal Options:

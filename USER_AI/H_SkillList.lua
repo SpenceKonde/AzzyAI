@@ -135,8 +135,8 @@ SkillList[ELEANOR][MH_EQC ]=5
 SkillList[DIETER]={}
 SkillList[DIETER][MH_MAGMA_FLOW ]=5
 SkillList[DIETER][MH_GRANITIC_ARMOR ]=5
-SkillList[DIETER][MH_LAVA_SLIDE ]=5
-SkillList[DIETER][MH_PYROCLASTIC ]=5
+SkillList[DIETER][MH_LAVA_SLIDE ]=10
+SkillList[DIETER][MH_PYROCLASTIC ]=10
 SkillList[DIETER][MH_VOLCANIC_ASH ]=5
 
 --SkillListM[mertype][skillid]=level

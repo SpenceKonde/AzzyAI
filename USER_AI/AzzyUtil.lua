@@ -2198,7 +2198,11 @@ function	GetSOwnerBuffSkill(myid)
 			skillopt=UseEiraOveredBoost
 		elseif	(htype==DIETER and UseDieterPyroclastic~=0) then
 			skill=MH_PYROCLASTIC
-			level = 10
+			if DieterPyroclasticLevel==nil then
+				level = 10
+			else
+				level=DieterPyroclasticLevel
+			end
 			skillopt=UseDieterPyroclastic
 		end
 		return skill,level,skillopt

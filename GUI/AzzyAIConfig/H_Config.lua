@@ -59,6 +59,7 @@ UseBayeriGoldenPherze	=0
 UseDieterMagmaFlow	=0
 UseDieterGraniticArmor	=0
 UseDieterPyroclastic	=0
+DieterPyroclasticLevel	=10
 UseEiraOveredBoost		=0
 HealSelfHP		= 50 
 HealOwnerHP              = 50 
