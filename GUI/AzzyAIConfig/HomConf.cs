@@ -407,6 +407,7 @@ namespace AzzyAIConfig
             _UseDieterMagmaFlow = (UseDieterMagmaFlowOptions)((DefaultValueAttribute)TypeDescriptor.GetProperties(this)["UseDieterMagmaFlow"].Attributes[typeof(DefaultValueAttribute)]).Value;
             _UseDieterGraniticArmor = (UseDieterGraniticArmorOptions)((DefaultValueAttribute)TypeDescriptor.GetProperties(this)["UseDieterGraniticArmor"].Attributes[typeof(DefaultValueAttribute)]).Value;
             _UseDieterPyroclastic = (UseDieterPyroclasticOptions)((DefaultValueAttribute)TypeDescriptor.GetProperties(this)["UseDieterPyroclastic"].Attributes[typeof(DefaultValueAttribute)]).Value;
+            _DieterPyroclasticLevel = Convert.ToInt32(((DefaultValueAttribute)TypeDescriptor.GetProperties(this)["DieterPyroclasticLevel"].Attributes[typeof(DefaultValueAttribute)]).Value);
             _UseEiraOveredBoost = (UseEiraOveredBoostOptions)((DefaultValueAttribute)TypeDescriptor.GetProperties(this)["UseEiraOveredBoost"].Attributes[typeof(DefaultValueAttribute)]).Value;
             _HealSelfHP = Convert.ToInt32(((DefaultValueAttribute)TypeDescriptor.GetProperties(this)["HealSelfHP"].Attributes[typeof(DefaultValueAttribute)]).Value);
             _UseAutoHeal = (UseAutoHealOptions)((DefaultValueAttribute)TypeDescriptor.GetProperties(this)["UseAutoHeal"].Attributes[typeof(DefaultValueAttribute)]).Value;
@@ -569,6 +570,7 @@ namespace AzzyAIConfig
             H_Config.UseDieterMagmaFlow = Convert.ToInt32(_UseDieterMagmaFlow);
             H_Config.UseDieterGraniticArmor = Convert.ToInt32(_UseDieterGraniticArmor);
             H_Config.UseDieterPyroclastic = Convert.ToInt32(_UseDieterPyroclastic);
+            H_Config.DieterPyroclasticLevel = _DieterPyroclasticLevel;
             H_Config.UseEiraOveredBoost = Convert.ToInt32(_UseEiraOveredBoost);
             H_Config.HealSelfHP = _HealSelfHP;
             H_Config.LavaSlideMode = Convert.ToInt32(_LavaSlideMode);
@@ -732,6 +734,7 @@ namespace AzzyAIConfig
             _UseDieterMagmaFlow = (UseDieterMagmaFlowOptions)H_Config.UseDieterMagmaFlow;
             _UseDieterGraniticArmor = (UseDieterGraniticArmorOptions)H_Config.UseDieterGraniticArmor;
             _UseDieterPyroclastic = (UseDieterPyroclasticOptions)H_Config.UseDieterPyroclastic;
+            _DieterPyroclasticLevel = H_Config.DieterPyroclasticLevel;
             _UseEiraOveredBoost = (UseEiraOveredBoostOptions)H_Config.UseEiraOveredBoost;
             _HealSelfHP = H_Config.HealSelfHP;
             _UseAutoHeal = (UseAutoHealOptions)H_Config.UseAutoHeal;
@@ -1892,7 +1895,7 @@ namespace AzzyAIConfig
             "Use this level of Lava Slide. Overridden by skill tactics " +
             "unless MobSkillFixedLevel is enabled"
             ),
-        DefaultValue(5)]
+        DefaultValue(10)]
         public int DieterLavaSlideLevel
         {
             get { return _DieterLavaSlideLevel; }
@@ -1902,9 +1905,9 @@ namespace AzzyAIConfig
                 {
                     _DieterLavaSlideLevel = 1;
                 }
-                else if (value > 5)
+                else if (value > 10)
                 {
-                    _DieterLavaSlideLevel = 5;
+                    _DieterLavaSlideLevel = 10;
                 }
                 else
                 {
@@ -2664,6 +2667,33 @@ namespace AzzyAIConfig
             get { return _UseDieterPyroclastic; }
             set { _UseDieterPyroclastic = value; }
         }
+
+int _DieterPyroclasticLevel = 10;
+	[Category("Autobuff Options"),
+	Description(
+		"Use this level of Pyroclastic." +
+		"                                                              "
+		),
+	DefaultValue(10)]
+public int DieterPyroclasticLevel
+{
+    get { return _DieterPyroclasticLevel; }
+    set
+    {
+        if (value < 1)
+        {
+            _DieterPyroclasticLevel = 1;
+        }
+        else if (value > 10)
+        {
+            _DieterPyroclasticLevel = 10;
+        }
+        else
+        {
+            _DieterPyroclasticLevel = value;
+        }
+    }
+}
 
         UseEiraOveredBoostOptions _UseEiraOveredBoost = UseEiraOveredBoostOptions.Never;
         [Category("Autobuff Options"),
