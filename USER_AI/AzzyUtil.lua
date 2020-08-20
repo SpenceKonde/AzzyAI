@@ -1777,7 +1777,7 @@ function GetSAtkSkill(myid)
 			if htype==EIRA and UseEiraEraseCutter==1 then
 				skill=MH_ERASER_CUTTER
 				if EiraEraseCutterLevel==nil then
-					level=4
+					level=10
 				else
 					level=EiraEraseCutterLevel
 				end
@@ -2045,7 +2045,7 @@ function GetMobSkill(myid)
 			if htype==EIRA and UseEiraXenoSlasher==1 then
 				skill=MH_XENO_SLASHER
 				if EiraXenoSlasherLevel==nil then
-					level=4
+					level=10
 				else
 					level=EiraXenoSlasherLevel
 				end
