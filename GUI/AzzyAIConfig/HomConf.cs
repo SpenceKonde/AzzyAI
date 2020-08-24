@@ -1509,13 +1509,13 @@ namespace AzzyAIConfig
             set { _UseEiraSilentBreeze = value; }
         }
 
-        int _EiraXenoSlasherLevel = 4;
+        int _EiraXenoSlasherLevel = 10;
         [Category("AutoSkill Options"),
         Description(
             "Use this level of Xeno Slasher. Overridden by skill tactics " +
             "unless MobSkillFixedLevel is enabled"
             ),
-        DefaultValue(4)]
+        DefaultValue(10)]
         public int EiraXenoSlasherLevel
         {
             get { return _EiraXenoSlasherLevel; }
@@ -1525,9 +1525,9 @@ namespace AzzyAIConfig
                 {
                     _EiraXenoSlasherLevel = 1;
                 }
-                else if (value > 5)
+                else if (value > 10)
                 {
-                    _EiraXenoSlasherLevel = 5;
+                    _EiraXenoSlasherLevel = 10;
                 }
                 else
                 {
@@ -1574,13 +1574,13 @@ namespace AzzyAIConfig
             set { _UseEiraEraseCutter = value; }
         }
 
-        int _EiraEraseCutterLevel = 4;
+        int _EiraEraseCutterLevel = 10;
         [Category("AutoSkill Options"),
         Description(
             "Use this level of Erase Cutter. Overridden by skill tactics" +
             "Try level 2, it's more practical than 4 in many cases"
             ),
-        DefaultValue(4)]
+        DefaultValue(10)]
         public int EiraEraseCutterLevel
         {
             get { return _EiraEraseCutterLevel; }
@@ -1590,9 +1590,9 @@ namespace AzzyAIConfig
                 {
                     _EiraEraseCutterLevel = 1;
                 }
-                else if (value > 5)
+                else if (value > 10)
                 {
-                    _EiraEraseCutterLevel = 5;
+                    _EiraEraseCutterLevel = 10;
                 }
                 else
                 {
@@ -1695,13 +1695,13 @@ namespace AzzyAIConfig
             set { _UseSeraParalyze = value; }
         }
 
-        int _SeraParalyzeLevel = 5;
+        int _SeraParalyzeLevel = 10;
         [Category("AutoSkill Options"),
         Description(
             "Use this level of Needle of Paralyze. Overridden by skill tactics" +
             "                                                              "
             ),
-        DefaultValue(5)]
+        DefaultValue(10)]
         public int SeraParalyzeLevel
         {
             get { return _SeraParalyzeLevel; }
@@ -1711,9 +1711,9 @@ namespace AzzyAIConfig
                 {
                     _SeraParalyzeLevel = 1;
                 }
-                else if (value > 5)
+                else if (value > 10)
                 {
-                    _SeraParalyzeLevel = 5;
+                    _SeraParalyzeLevel = 10;
                 }
                 else
                 {
