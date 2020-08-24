@@ -1695,13 +1695,13 @@ namespace AzzyAIConfig
             set { _UseSeraParalyze = value; }
         }
 
-        int _SeraParalyzeLevel = 5;
+        int _SeraParalyzeLevel = 10;
         [Category("AutoSkill Options"),
         Description(
             "Use this level of Needle of Paralyze. Overridden by skill tactics" +
             "                                                              "
             ),
-        DefaultValue(5)]
+        DefaultValue(10)]
         public int SeraParalyzeLevel
         {
             get { return _SeraParalyzeLevel; }
@@ -1711,9 +1711,9 @@ namespace AzzyAIConfig
                 {
                     _SeraParalyzeLevel = 1;
                 }
-                else if (value > 5)
+                else if (value > 10)
                 {
-                    _SeraParalyzeLevel = 5;
+                    _SeraParalyzeLevel = 10;
                 }
                 else
                 {

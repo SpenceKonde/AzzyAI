@@ -1791,7 +1791,7 @@ function GetSAtkSkill(myid)
 			elseif htype==SERA and UseSeraParalyze==1 then
 				skill=MH_NEEDLE_OF_PARALYZE
 				if SeraParalyzeLevel==nil then
-					level=5
+					level=10
 				else
 					level=SeraParalyzeLevel
 				end
@@ -2315,7 +2315,7 @@ function	GetDefensiveOwnerSkill(myid)
 	local skillopt = 0
 	if (IsHomun(myid)==1) then
 		if GetV(V_HOMUNTYPE,MyID)==SERA and UseSeraPainkiller~=0 then
-			level=5
+			level=10
 			return MH_PAIN_KILLER,level,UseSeraPainkiller
 		else
 			return 0,0,0
